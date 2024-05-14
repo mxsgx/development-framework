@@ -1,0 +1,19 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@tabler/core": "^1.0.0-beta20",
+        "alpinejs": "^3.13.10",
+        "axios": "^1.6.4",
+        "imask": "^6.6.3",
+        "laravel-vite-plugin": "^1.0",
+        "litepicker": "^2.0.12",
+        "sass": "^1.77.0",
+        "tom-select": "^2.3.1",
+        "vite": "^5.0"
+    }
+}
