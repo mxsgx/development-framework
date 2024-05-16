@@ -23,8 +23,34 @@ Alpine.data('createCustomer', () => ({
   },
 }));
 
-Alpine.data('logoPreview', () => ({
+Alpine.data('indexCustomer', () => ({
+  deleteUrl: '',
+  confirmDelete(event) {
+    this.deleteUrl = event.target.href
+  },
+}))
+
+Alpine.data('indexUser', () => ({
+  deleteUrl: '',
+  confirmDelete(event) {
+    this.deleteUrl = event.target.href
+  },
+}))
+
+Alpine.data('indexCar', () => ({
+  deleteUrl: '',
+  confirmDelete(event) {
+    this.deleteUrl = event.target.href
+  },
+}))
+
+Alpine.data('indexBrand', () => ({
   logoUrl: '',
+  deleteUrl: '',
+
+  confirmDelete(event) {
+    this.deleteUrl = event.target.href
+  },
 
   clearPreview() {
     this.logoUrl = '';
