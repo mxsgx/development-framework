@@ -109,7 +109,7 @@ class CarController extends Controller
      */
     public function destroy(Car $car)
     {
-        $imagePath = $car->imagePreviews ? $car->imagePreviews->first()->content : null;
+        $imagePath = $car->imagePreviews ? $car->imagePreviews->first->content : null;
 
         $car->delete();
 
