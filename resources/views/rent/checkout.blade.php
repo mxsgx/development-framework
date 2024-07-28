@@ -9,8 +9,8 @@
             <div class="btn-list">
                 <a href="{{ route('admin.dashboard') }}" class="btn btn-primary d-none d-sm-inline-block">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                        stroke-linejoin="round">
+                         stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                         stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M12 5l0 14"></path>
                         <path d="M5 12l14 0"></path>
@@ -19,10 +19,10 @@
                     {{ __('Dashboard') }}
                 </a>
                 <a href="{{ route('admin.dashboard') }}" class="btn btn-primary d-sm-none btn-icon"
-                    aria-label="{{ __('Dashboard') }}">
+                   aria-label="{{ __('Dashboard') }}">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                        stroke-linejoin="round">
+                         viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                         stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M12 5l0 14"></path>
                         <path d="M5 12l14 0"></path>
@@ -40,19 +40,19 @@
                         <div class="col-lg-4 my-2">
                             <p class="h3 text-secondary">{{ __('Brand Merk') }}</p>
                             <p class="h1 mb-0">
-                                {{ $car->brand->name }}
+                            {{ $car->brand->name }}
                             <p>
                         </div>
                         <div class="col-lg-4 my-2">
                             <p class="h3 text-secondary">{{ __('Transmission Type') }}</p>
                             <p class="h1 mb-0">
-                                {{ $car->transmission_type->name }}
+                            {{ $car->transmission_type->name }}
                             <p>
                         </div>
                         <div class="col-lg-4 my-2">
                             <p class="h3 text-secondary">{{ __('Color') }}</p>
                             <p class="h1 mb-0">
-                                {{ str($car->color)->upper() }}
+                            {{ str($car->color)->upper() }}
                             <p>
                         </div>
                     </div>
@@ -69,13 +69,13 @@
                         </div>
 
                         <div id="carousel-indicators-thumb" class="carousel slide carousel-fade mb-4"
-                            data-bs-ride="carousel">
+                             data-bs-ride="carousel">
                             <div class="carousel-indicators carousel-indicators-thumb">
                                 @foreach ($car->imagePreviews as $image)
                                     <button type="button" data-bs-target="#carousel-indicators-thumb"
-                                        data-bs-slide-to="{{ $loop->index }}"
-                                        class="ratio ratio-4x3 @if ($loop->first) active @endif"
-                                        style="background-image: url({{ $image->url }})"></button>
+                                            data-bs-slide-to="{{ $loop->index }}"
+                                            class="ratio ratio-4x3 @if ($loop->first) active @endif"
+                                            style="background-image: url({{ $image->url }})"></button>
                                 @endforeach
                             </div>
                             <div class="carousel-inner">
@@ -142,8 +142,7 @@
             </div>
         </div>
 
-        <form class="col-lg-4" method="post" action="{{ route('rent.rent', compact('car')) }}">
-            @csrf
+        <div>
             <div class="card">
                 <div class="card-body">
                     <div class="mb-2">
@@ -175,8 +174,8 @@
                         <div class="input-icon">
                             <span class="input-icon-addon">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round">
+                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                     stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <path
                                         d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
@@ -189,7 +188,7 @@
                                 </svg>
                             </span>
                             <input class="form-control" id="start-date" name="start_date"
-                                value="{{ now()->format('Y-m-d') }}">
+                                   value="{{ now()->format('Y-m-d') }}">
                         </div>
                     </div>
 
@@ -198,8 +197,8 @@
                         <div class="input-icon">
                             <span class="input-icon-addon">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
-                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round">
+                                     viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                     stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                     <path
                                         d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z">
@@ -212,7 +211,7 @@
                                 </svg>
                             </span>
                             <input class="form-control" id="end-date" name="end_date"
-                                value="{{ now()->addDays(1)->format('Y-m-d') }}">
+                                   value="{{ now()->addDays(1)->format('Y-m-d') }}">
                         </div>
                     </div>
 
@@ -258,11 +257,11 @@
                     </table>
 
                     <div class="mb-3">
-                        <button type="submit" class="btn btn-primary w-full">{{ __('Booking Now') }}</button>
+                        <button type="button" class="btn btn-primary w-full" disabled>{{ __('Booked Successfully') }}</button>
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
     </x-admin.body>
 
     @push('scripts')

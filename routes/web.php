@@ -15,6 +15,8 @@ Route::controller(RentController::class)->group(function () {
 
     Route::prefix('rent')->name('rent.')->group(function () {
         Route::get('{car}', 'detail')->name('detail');
+        Route::post('{car}', 'createOrder')->name('rent');
+        Route::get('{car}/checkout', 'checkout')->name('checkout');
     });
 });
 
